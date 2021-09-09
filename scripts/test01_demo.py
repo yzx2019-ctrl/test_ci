@@ -3,11 +3,14 @@
 from selenium import webdriver
 import time
 
+driver_path = "C:\driver\chromedriver.exe"
+
+
 class TestDemo(object):
 
     def setup_class(self):
         print("开始")
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(executable_path=driver_path)
 
     def teardown_class(self):
         self.driver.quit()
